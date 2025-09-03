@@ -1,0 +1,55 @@
+:root {
+   --gris: #cfe0da;
+   --azulOscuro: #16142f;
+   --azulMedio: #236476;
+   --verdeBiche: #7dad3f;
+   --verdeOscuro: #4a6c2f;
+   --naranja: #ff5d40;
+   --azul: #1f2350;
+   --verdeSena: #00bc00;
+   --blanco: white;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100dvh;
+}
+
+.seccion {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+}
+
+.seccion1 {
+   flex-direction: column;
+   position: relative;
+}
+
+.seccion2 {
+   flex-direction: column;
+}
+
+.seccion3 {
+  position: relative;
+}
+
+
+
+.seccion5 {
+
+}
+
+.icon-size,
+.my-popover-btn,.btn{
+   display: none;
+}

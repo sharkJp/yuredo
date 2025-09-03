@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuredo:El despertar de los Mimiwias</title>
+  <!--SEO-->
+  <meta name="description" content="Descubre 'Yuredo', el cortometraje animado 3D sobre una abuela diosa que da vida a la selva amazónica y crea a los Mimiwias, 
+      una leyenda cultural del Vaupés." />
+  <meta name="keywords" content="Yuredo, cortometraje, leyenda indígena, Vaupés, Amazonas, Mimiwias, animación 3D, cultura indígena, mitología amazónica, 
+      ecología, naturaleza, espiritualidad, tradiciones ancestrales" />
+
+  <meta property="og:title" content="Yuredo: El Despertar de los Mimiwias" />
+  <meta property="og:description" content="Explora la leyenda del Vaupés en esta animación 3D, donde una abuela diosa crea la vida en la selva y a los misteriosos Mimiwias. 
+      ¡Un viaje a la cultura amazónica!" />
+  <meta property="og:image" content="ruta/a/la/imagen_representativa.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.yuredo.com" />
+
+  <!--styles-->
+  <link rel="stylesheet" href="static/css/main.css" />
+  <link rel="stylesheet" href="static/css/seccion1.css" />
+  <link rel="stylesheet" href="static/css/seccion2.css" />
+  <link rel="stylesheet" href="static/css/seccion3.css" />
+  <link rel="stylesheet" href="static/css/seccion4.css" />
+  <link rel="stylesheet" href="static/css/seccion5.css" />
+  <link rel="stylesheet" href="static/css/seccion7.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!--favicon-->
+  <link rel="icon" href="./static/img/favicon/Favicon_YUREDO_white.svg" type="image/svg" />
+  <!--fuentes notosan y raleway-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+  <!--seccion 1-->
+  <section class="seccion seccion1" id="secc1">
+    <img class="flor-amarilla" src="./static/img/img_all/flor-amarilla.webp" alt="" />
+
+    <!-- Modal de Audio -->
+    <div id="audioModal" class="audio-modal" style="display: none">
+      <div class="audio-modal-content">
+        <div class="cerrar-audio">
+          <div class="icon">
+            <input id="volumeControl" type="range" min="0" max="1" value="0.5" class="volume-range" step="0.01"
+              onchange="setVolume(this.value)" />
+            <i class="fa fa-volume-up icon-size" aria-hidden="true"></i>
+            <div class="bar-hoverbox">
+              <div class="bar">
+                <div class="bar-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <!--btn cerrar modal-->
+          <div id="closeAudioModal" class="audio-close">
+            <h2>&times;</h2>
+          </div>
+        </div>
+        <div class="player-audio">
+          <div class="volume">
+            <div class="texto">
+              <h2>
+                <a href="#" class="txtv" onclick="selectSong('cubeo.mp3'); return false;">Cubeo</a>
+                <strong>/</strong>
+                <a href="#" onclick="selectSong('desano.mp3'); return false;">Desano</a>
+              </h2>
+            </div>
+            <div class="submenu" id="submenu">
+              <a class="txtv" href="#" onclick="selectSong('cubeo.mp3'); return false;">Cubeo</a>
+              <a href="#" onclick="selectSong('desano.mp3'); return false;">Desano</a>
+              <a href="#" onclick="selectSong('espanol.mp3'); return false;">Español</a>
+            </div>
+          </div>
+        </div>
+        <div class="botones">
+          <div class="contenedor-tempo">
+            <!--btn play svg-->
+            <svg id="Capa_2" class="player" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 281.93 281.93"
+              onclick="playAudio()">
+              <defs>
+                <style>
+                  .cls-play {
+                    fill: var(--verdeSena);
+                    transition: transform 0.1s ease;
+                  }
+
+                  .cls-tempo {
+                    fill: white;
+                    stroke: #1f2350;
+                    stroke-miterlimit: 10;
+                    stroke-width: 11px;
+                    transition: transform 0.1s ease;
+                  }
+
+                  .active .cls-play {
+                    transform: scale(0.95);
+                    cursor: pointer;
+                  }
+
+                  .cls-play:hover {
+                    transform: scale(0.95);
+                    cursor: pointer;
+                  }
+                </style>
+              </defs>
+              <g id="Capa_1-2" data-name="Capa_1">
+                <g>
+                  <circle class="cls-tempo" cx="140.97" cy="140.97" r="135.47" />
+                  <path class="cls-play"
+                    d="M212.36,125.21l-88.2-50.92c-12.13-7-27.29,1.75-27.29,15.76v101.84c0,14.01,15.16,22.76,27.29,15.76l88.2-50.92c12.13-7,12.13-24.51,0-31.52Z" />
+                </g>
+              </g>
+            </svg>
+            <div class="barra">
+              <progress id="progressBar" value="0" max="100"></progress>
+              <div class="marker" id="marker"></div>
+            </div>
+            <div class="option" onclick="toggleSubmenu()">
+              <div class="btn"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <audio id="audioPlayer" src="./static/sound/audio-player/espanol.mp3" type="audio/mp3">
+      tu navegador no soporta el elemento de audio
+    </audio>
+
+    <!--fin del player-->
+    <!--nav-->
+    <nav>
+      <!--menu hamburger-->
+      <div class="btn-hamburger">
+        <button class="hamburger" onclick="toggleMenus()">
+          <span>☰</span>
+        </button>
+      </div>
+
+      <img class="fondo_top" src="./static//img/img_all/dianas.svg" alt="" />
+
+      <!--redes sociales-->
+      <div id="contenedor_social">
+        <div class="contenedor_social">
+          <a href="https://www.facebook.com/qr?id=61561227159190" target="_blank">
+            <img src="./static/img/redes_sociales/face.svg" alt="facebook" />
+          </a>
+        </div>
+        <div class="contenedor_social">
+          <a href="https://www.instagram.com/cortometraje_yuredo?utm_source=qr" target="_blank">
+            <img src="./static/img/redes_sociales/instagram.svg" alt="instagram" />
+          </a>
+        </div>
+        <div class="contenedor_social">
+          <a href="https://www.tiktok.com/@yuredocortometraje?_t=8pOJNhytfpW&_r=1" target="_blank">
+            <img src="./static/img/redes_sociales/tictok.svg" alt="tictok" />
+          </a>
+        </div>
+
+        <div class="contenedor_social">
+          <a href="
+https://youtube.com/@cortometrajeyuredo?si=_1ToUwIKw8ZSSfVf&cxqr=t4ylk6KvHXAMol17M
+kgXwQ
+" target="_blank">
+            <img src="./static/img/redes_sociales/youtube.svg" alt="cortometrage" />
+          </a>
+        </div>
+      </div>
+      <!--fin red social-->
+
+      <img src="./static/img/img_all/logo-yuredo.webp" class="logo-yuredo" alt="" />
+      <h1>El despertar de los Mimiwas</h1>
+    </nav>
+    <!--fin nav-->
+    <!--contenedor central-->
+    <div class="contenedor_cengtral">
+      <!--video-->
+      <video id="videoPlayer" preload="auto" controls playsinline>
+        <source src="./static/video/Teaser Yuredo 2024.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+      <!--boton de play-->
+      <div class="play" id="playBtn">
+        <img src="./static/img/img_all/play.svg" alt="play" />
+      </div>
+    </div>
+    <!--fondo 1° seccion-->
+    <div class="contenedor_footer_secc1">
+      <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 182.82 127.68">
+        <defs>
+          <style>
+            .cls-2 {
+              fill: #f0d5f1;
+            }
+          </style>
+          <filter id="outer-glow-1" filterUnits="userSpaceOnUse">
+            <feoffset dx="0" dy="0" />
+            <fegaussianblur result="blur" stdDeviation="9.75" />
+            <feflood flood-color="#b5e3f5" flood-opacity=".7" />
+            <fecomposite in2="blur" operator="in" />
+            <fecomposite in="SourceGraphic" />
+          </filter>
+        </defs>
+        <g id="ELEMENTS">
+          <g class="cls-1">
+            <path class="cls-2 blue"
+              d="M83.78,15.17c9.13,3.89,18.53,8.61,27.94,14.14,47.9,28.17,77.64,66.46,66.42,85.53-9.01,15.33-41.73,13.57-79.1-2.33-9.13-3.88-18.54-8.62-27.94-14.14C23.2,70.2-6.53,31.9,4.68,12.83,13.7-2.49,46.41-.74,83.78,15.17M84.68,13.03C45.07-3.83,12.12-4.38,2.69,11.66c-12.04,20.48,17.49,59.44,67.24,88.7,9.29,5.46,18.78,10.27,28.2,14.28,39.61,16.86,72.57,17.41,82,1.38,12.04-20.48-17.49-59.44-67.24-88.7-9.29-5.46-18.78-10.27-28.2-14.28h0Z" />
+            <path class="cls-2 purple"
+              d="M87.89,24.32c6.72,2.86,13.66,6.35,20.6,10.43,35.03,20.6,56.84,48.51,48.71,62.33-6.52,11.08-30.31,9.74-57.55-1.85-6.72-2.86-13.66-6.35-20.6-10.43C44.03,64.2,22.22,36.29,30.35,22.47c6.52-11.08,30.31-9.74,57.55,1.85M88.8,22.19c-29.62-12.61-53.35-12.96-60.44-.89-8.91,15.15,12.85,43.92,49.53,65.49,6.88,4.04,13.9,7.6,20.86,10.56,29.62,12.61,53.35,12.96,60.45.89,4.45-7.56,1.48-18.65-8.34-31.22-9.38-11.99-24-24.17-41.19-34.27-6.88-4.04-13.9-7.6-20.87-10.57h0Z" />
+            <path class="cls-2 yellow"
+              d="M93.04,63.62c-7.77-4.57-14.6-9.71-19.23-14.47-5.03-5.17-6.86-9.3-5.31-11.93,3.4-5.77,20.58.14,35,8.61,14.43,8.48,27.93,20.63,24.54,26.41-1.55,2.64-6.05,3.03-13.01,1.16-2.81-.76-5.88-1.85-9.1-3.22-4.14-1.76-8.52-3.98-12.89-6.55ZM70.5,38.4c-.71,1.21.22,4.25,4.98,9.14,4.48,4.62,11.14,9.61,18.74,14.08,7.59,4.48,15.21,7.85,21.42,9.54,6.59,1.78,9.7,1.12,10.41-.1,1.69-2.88-6.51-13.12-23.71-23.23-4.5-2.65-8.71-4.75-12.5-6.36-10.7-4.56-18.08-5.2-19.33-3.07Z" />
+            <path class="cls-2 red"
+              d="M85.12,76.27c-28.08-16.52-45.37-37.46-39.36-47.67,6.01-10.21,32.71-5.27,60.79,11.23,28.08,16.52,45.37,37.46,39.36,47.67-4.7,7.99-22.07,6.71-42.86-2.14-5.78-2.46-11.82-5.5-17.93-9.09ZM47.75,29.77c-5.17,8.79,12.48,29.17,38.54,44.5,26.06,15.34,52.45,20.85,57.62,12.06,5.17-8.79-12.48-29.17-38.54-44.5-5.86-3.45-11.73-6.39-17.37-8.79-19.48-8.29-36.24-10.08-40.25-3.26Z" />
+          </g>
+        </g>
+      </svg>
+      <img class="start-derecho" src="./static/img/img_all/star-sect-derecho.svg" alt srcset />
+      <img class="start-secc1" src="./static/img/img_all/star-sect1-bajo.svg" alt="" />
+      <img class="logo-sena" src="./static/img/logos/logo-sena.webp" alt="sena" />
+      <img class="fondo_botton" src="./static/img/img_all/fondo1.png" alt="" />
+    </div>
+  </section>
+  <!--fin seccion 1-->
+
+  <!--************************************************-->
+
+  <!--seccion 2-->
+  <section class="seccion seccion2" id="secc2">
+    <div class="contenedor_seccion2">
+      <div class="texto_titulo">
+        <h4>Semillero</h4>
+        <h2>Mot Mot</h2>
+      </div>
+      <div class="contenedor_central_secc2">
+        <div class="hojas_secc2">
+
+          <img class="hoja1" src="./static/img/img_all/hoja1.webp" alt="" />
+        </div>
+        <!-- Contenedor central del slider  -->
+        <div class="contenedor-slider-sect2">
+          <a href="https://senavaupes.blogspot.com/p/etnoornitologia.html" target="_blank">
+            <img class="btnMas" src="./static/img/img_all/btn-sabermas.webp" alt="" />
+          </a>
+          <div class="slider-sect2">
+            <div class="slider-item-sect2">
+              <div class="slider-img">
+                <img class="clickable-image-sect2" src="./static/img/img_all/semlleroPrincipal.jpeg" alt="Placeholder 1"
+                  onclick="openModalSect2()" />
+              </div>
+            </div>
+            <div class="slider-item-sect2" id="item2">
+              <div class="slider-img">
+                <img class="clickable-image-sect2" src="./static/img/img_all/MotMot_Semillero_01.png"
+                  alt="Placeholder 2" onclick="openModalSect2()" />
+              </div>
+            </div>
+            <div class="slider-item-sect2" id="item3">
+              <div class="slider-img">
+                <img class="clickable-image-sect2" src="./static/img/img_all/MotMot_Semillero_02.png"
+                  alt="Placeholder 3" onclick="openModalSect2()" />
+              </div>
+            </div>
+            <div class="slider-item-sect2" id="item4">
+              <div class="slider-img">
+                <img class="clickable-image-sect2" src="./static/img/img_all/MotMot_Semillero_03.png"
+                  alt="Placeholder 4" onclick="openModalSect2()" />
+              </div>
+            </div>
+            <div class="slider-item-sect2" id="item5">
+              <div class="slider-img">
+                <img class="clickable-image-sect2" src="./static/img/img_all/MotMot_Semillero_04.png"
+                  alt="Placeholder 5" onclick="openModalSect2()" />
+              </div>
+            </div>
+            <div class="slider-item-sect2" id="item6">
+              <div class="slider-img">
+                <img class="clickable-image-sect2" src="./static/img/img_all/MotMot_Semillero_05.png"
+                  alt="Placeholder 6" onclick="openModalSect2()" />
+              </div>
+            </div>
+            <button class="prev-sect2" onclick="moveSlide(-1)">
+              &#10094;
+            </button>
+            <button class="next-sect2" onclick="moveSlide(1)">
+              &#10095;
+            </button>
+          </div>
+        </div>
+        <!--fin contenedor central del slider-->
+        <div class="sect2-texto">
+          <h4>
+
+          </h4>
+        </div>
+        <div class="colibri_secc2">
+          <img class="hoja2" src="./static/img/img_all/hoja2.png" alt="" />
+          <img class="colibri" src="./static/img/img_all/colibri.webp" alt="" />
+        </div>
+      </div>
+    </div>
+    <img src="./static/img/img_all/star-sect2-bajo.svg" class="img_sect2_bajo" alt="" />
+  </section>
+  <!--fin seccion 2-->
+
+  <!--************************************************-->
+
+  <!--seccion 3-->
+  <section class="seccion seccion3" id="secc3">
+    <img src="./static/img/img_all/fondo3.1.webp" class="img_sect3" alt="" />
+    <img src="./static/img/img_all/star-sect3.svg" class="img_sect3_start" alt="" />
+    <div class="contenedor_seccion3">
+      <img src="./static/img/img_all/dianas3.svg" class="diana_sect3" alt="" />
+      <div class="centro">
+        <div class="videoYoutube">
+          <video id="video-seccion3" preload="auto" controls>
+            <source src="./static/video/Colombia Nativa.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+          </video>
+        </div>
+      </div>
+      <a href="https://www.youtube.com/@cortometrajeyuredo" target="_blank">
+        <img class="btnMas" src="./static/img/img_all/btn-sabermas.webp" alt="" />
+      </a>
+      <img src="./static/img/img_all/flor_amarilla.svg" alt="flor_amarilla" class="flor_amarilla_sect3">
+      <img src="./static/img/img_all/colibri-sect3.png" class="colibri-sect3" alt="colibri">
+    </div>
+    <img src="./static/img/img_all/fondo3.2.png" class="img_sect3_bajo" alt="" />
+  </section>
+  <!--fin seccion 3-->
+
+  <!--************************************************-->
+
+  <!--seccion 4-->
+  <section class="seccion seccion4" id="secc4">
+    <img src="./static/img/fondo4.png" alt>
+    <img src="./static/img/img_all/dianas4.svg" class="diana_sect4" alt="" />
+
+    <div class="contenedor4">
+      <div class="titulo-sect4">
+        <h3>Etno-ornitologia</h3>
+      </div>
+      <div class="contenedor4_1">
+        <div class="cartillas">
+          <a href="https://yuredo.com/Cartillas%20Etno.zip" target="_blank">
+            <img src="./static/img/img_all/btn-sabermas.webp" alt>
+          </a>
+          <a href="https://yuredo.com/Cartillas%20Etno.zip" target="_blank">
+            <h5> descarga los libros aqui.</h5>
+          </a>
+        </div>
+
+      </div>
+      <div class="contenedor4_2">
+        <div class="texto">
+          <h5>
+            <b>Etno-Ornitología</b> <br>
+            La Etno-Ornitología conecta el saber indígena con la investigación científica. En el
+            Vaupés, las aves no son solo fauna, sino parte esencial de la vida cultural y
+            espiritual. Nuestro trabajo recupera este conocimiento y lo documenta, generando
+            productos como guías, protocolos y eventos para su difusión.
+          </h5>
+        </div>
+      </div>
+      <div class="contenedor4_3">
+        <!--seccion slider-->
+        <div class="sect4-tres">
+          <div class="sect4-tres-slider">
+            <div class="sect4-slide">
+              <img class="sect4-item1" src="./static/img/img_all/Etno_Ornitologia_02.jpg" alt="Placeholder 1">
+
+              <div class="sect4-item1">
+
+              </div>
+            </div>
+            <div class="sect4-slide">
+              <img class="sect4-item2" src="./static/img/img_all/Etno_Ornitologia_03.jpg" alt="Placeholder 2">
+
+              <div class="sect4-item2">
+
+              </div>
+            </div>
+            <div class="sect4-slide">
+              <img class="sect4-item3" src="./static/img/img_all/Etno_Ornitologia_01.jpg" alt="Placeholder 3">
+
+              <div class="sect4-item3">
+
+              </div>
+            </div>
+            <div class="sect4-slide">
+              <img class="sect4-item4" src="./static/img/img_all/Etno_Ornitologia_04.jpg" alt="Placeholder 4">
+
+              <div class="sect4-item4">
+
+              </div>
+            </div>
+          </div>
+
+          <button class="sect4-prev" id="prev-sect4">&#10094;</button>
+          <button class="sect4-next" id="next-sect4">&#10095;</button>
+        </div>
+
+      </div>
+      <div class="contenedor4_4 cuatro">
+
+        <div class="sect4-txt">
+          <h5>
+            <!-- El texto cambiará dinámicamente -->
+          </h5>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+  <!--fin seccion 4-->
+  <!--************************************************-->
+  <!--seccion 5-->
+  <section class="seccion seccion5" id="secc5">
+    <div class="contenedor_secc5">
+      <div class="titulo_sect5">
+        <h2>Podcast Aves Vaupés</h2>
+      </div>
+      <div class="contenedor_central_secc5">
+        <div class="videoPodcast" style="width: 36vw; height: 30vw;margin-left:3%; position: relative;">
+          <video id="videoPlayer3" preload="auto" controls
+            style="width: 90%; height: 80%; display: block; border-radius: 20px; object-fit: cover;margin-left:5%; margin-top:5%">
+            <source src="./static/video/Colombia Nativa.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+          </video>
+        </div>
+      </div>
+      <div class="contenedor_footer_secc5">
+
+      </div>
+    </div>
+
+  </section>
+  <!--fin seccion 5-->
+  <!--************************************************-->
+<!--seccion 6-->
+  <section id="secc7">
+<img src="./static/img/img_all/palmas.svg" class="palmas" alt="palmas">
+      <img src="./static/img/img_all/star-sect2-bajo.svg" class="img_sect6_bajo" alt="estrellas">
+      <img src="./static/img/img_all/star-sect-derecho.svg" class="img_sect6_derecho" alt="estrellas"> -->
+
+    <div class="contenedor">
+
+      <div class="contenedor-slider">
+        <button class="prevSect6" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="slider">
+          <div class="slider-item" id="item1">
+            <div class="slider-img gloria" style="border:none;">
+              <img src="./static/img/avatares/sra gloria.png" alt="Gloria">
+
+            </div>
+            <div class="text-slider-img">
+
+              <h5> Gloria Rivera</h5>
+              <br />
+
+              <h6>Investigadora líder de Enfoque Étnico</h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item2">
+            <div class="slider-img leonardo" style="border:none;">
+              <img src="./static/img/avatares/profe leonardo bernal.webp" alt="Leonardo">
+            </div>
+            <div class="text-slider-img">
+              <h5>Leonardo Huertas Bernal</h5>
+              <h6>Director</h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item3">
+            <div class="slider-img" style="border:none; ">
+              <img src="./static/img/avatares/profe luis salcedo.png" alt="Luis">
+            </div>
+            <div class="text-slider-img">
+              <h5>Luis Enrique Salcedo</h5>
+              <h6>Technical Director 3d</h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item4">
+            <div class="slider-img" style="border:none; ">
+              <img src="./static/img/avatares/luis enrique llanos.png" alt="Enrrique">
+            </div>
+            <div class="text-slider-img">
+              <h5>Luis Enrrique Llanos</h5>
+              <h6>Sabedor Tradicional Pamiwa</h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item5">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/profe ivonne espindola.png" alt="Ivonne">
+            </div>
+            <div class="text-slider-img">
+              <h5>Ivonne Espindola </h5>
+              <h6>VFX y Animación</h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item6">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/fabian rodriguez traductor.png" alt="Fabian">
+            </div>
+            <div class="text-slider-img">
+              <h5>Fabián Rodriguez </h5>
+              <h6>Traductor de lengua Pamie</p>
+                <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item7">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/yenifer lopez.png" alt="Yenifer">
+            </div>
+            <div class="text-slider-img">
+              <h5>Yenifer Lopez </h5>
+              <h6>Investigador Junior</h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item8">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/angelica beltran.png" alt="angelica">
+            </div>
+            <div class="text-slider-img">
+              <h5>Angelica Beltran</h5>
+              <h6>Animador 3D</h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item9">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/cristina arce.png" alt="Cristina">
+            </div>
+            <div class="text-slider-img">
+              <h5>Cristina Arce Nieto</h5>
+              <h6>Animador 3D</h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item10">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/daniel galindo.png" alt="Daniel">
+            </div>
+            <div class="text-slider-img">
+              <h5>Daniel Felipe Galindo</h5>
+              <h6>Animador 3D
+              </h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item11">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/daniel ocampo.png" alt="Daniel">
+            </div>
+            <div class="text-slider-img">
+              <h5>Daniel Ricardo Ocampo</h5>
+              <h6>Animador 3D y Artista Conceptual
+              </h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item12">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/edgar felipe co.png" alt="felipe">
+            </div>
+            <div class="text-slider-img">
+              <h5>Felipe Cortez </h5>
+              <h6>Dinamizador SENNOVA Vaupés</h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item13">
+            <div class="slider-img jhonge" style="border:none; ">
+              <img src="./static/img/avatares/jhon gerardo.png" alt="jhonge">
+
+            </div>
+            <div class="text-slider-img">
+              <h5>Jhon Gerardo Plazas
+              </h5>
+              <h6> Desarrollador Web, Multimedia y Software
+              </h6>
+              <a href="www.linkedin.com/in/jhon-gerardo-plazas-0731a021b">Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item14">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/iohann vargas.png" alt="Iohann">
+            </div>
+            <div class="text-slider-img">
+              <h5>Iohann Vargas</h5>
+              <h6>Animador 3D
+              </h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item15">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/jorge bolaños.svg" alt="Jorge">
+            </div>
+            <div class="text-slider-img">
+              <h5>Jorge Luis Bolaños</h5>
+              <h6>Diseño visual Publicidad y Marketing</h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item16">
+            <div class="slider-img" style="border:none; ">
+              <img src="./static/img/avatares/leiner barros.png" alt="leiner">
+              </h5>
+            </div>
+            <div class="text-slider-img">
+              <h5>Leiner Barros Agamez</h5>
+              <h6>Diserrollo Publicitario y Sonoro
+              </h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item17">
+            <div class="slider-img" style="border:none; ">
+              <img src="./static/img/avatares/luisa rodriguez.png" alt="Luisa">
+            </div>
+            <div class="text-slider-img">
+              <h5>Luisa Fernanda Rodriguez</h5>
+              <h6>
+                Animador 3D
+              </h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item18">
+            <div class="slider-img" style="border:none; ">
+              <img src="./static/img/avatares/nicolas ramirez.png" alt="luisa">
+            </div>
+            <div class="text-slider-img">
+              <h5>Nicolas Andrés Ramirez</h5>
+              <h6>
+                Animador 3D
+              </h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item19">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/nubia bocanegra.png" alt="Nubia">
+            </div>
+            <div class="text-slider-img">
+              <h5>Nubia Esperanza Bonilla</h5>
+              <h6>Diserrollo Publicitario
+              </h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item20">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/sharick.png" alt="Sharik Sofia">
+            </div>
+            <div class="text-slider-img">
+              <h5>Sharyk Sofia Gómez</h5>
+              <h6>Desarrolladora Web y Multimedia
+              </h6>
+              <a href>Portafolio</a>
+            </div>
+          </div>
+
+          <div class="slider-item" id="item21">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/sara acosta.png" alt="sara">
+            </div>
+            <div class="text-slider-img">
+              <h5>Sara Lucia Acosta</h5>
+              <h6>Diseño Gráfico y Asistente de producción</h6>
+
+              <a href>Portafolio</a>
+            </div>
+          </div>
+          <div class="slider-item" id="item22">
+            <div class="slider-img" style="border:none;">
+              <img src="./static/img/avatares/sebastian guerrero.png" alt="sebastian">
+            </div>
+            <div class="text-slider-img">
+              <h5>Sebastian Guerrero</h5>
+              <h6>Biólogo</h6>
+
+              <a href>Portafolio</a>
+            </div>
+          </div>
+        </div>
+        <button class="nextSect6" onclick="moveSlide(1)">&#10095;</button>
+
+      </div>
+    </div>
+    <div class="titulo_sect6">
+      <h2>Equipo</h2>
+<p>&copy; 2025 Derechos reservados equipo web yuredo</p>
+    </div>
+    <img src="./static/img/img_all/alas.webp" class="alas" alt="alas">
+    <img src="./static/img/img_all/star.svg" class="img_sect6_bajo" alt="estrellas">
+  </section>
+  <!--fin seccion 6-->
+  <!--************************************************-->
+  <!--menu vertical-->
+  <!--izquierdo-->
+  <div class="vertical-menu left-menu" id="leftMenu">
+    <div class="cerrar-logo">
+      <button class="close-btn" onclick="closeMenu('leftMenu')">
+        &times;
+      </button>
+      <img src="./static/img/logos/logo-sena.webp" alt />
+    </div>
+    <div class="contendor-menu-left">
+      <ul>
+        <li>
+          <a href="https://www.sena.edu.co/es-co/Paginas/default.aspx" target="_blank">SENA</a>
+        </li>
+        <li>
+          <a href="https://senavaupes.blogspot.com/" target="_blank">JIRIJIRIMO</a>
+          <p>Vaupés</p>
+        </li>
+        <li>
+          <a href="https://comunicaciongraficasena.blogspot.com/" target="_blank">CENIGRAF</a>
+          <p>Bogotá</p>
+        </li>
+
+        <li>
+          <a href="https://actividadfisicaycultura.blogspot.com/" target="_blank">CEFAFC
+          </a>
+          <p>Bogotá</p>
+        </li>
+        <li>
+          <a href="https://mercadoslogisticaytecnologia.blogspot.com/" target="_blank">CGMLTI
+          </a>
+          <p>Bogotá</p>
+        </li>
+        <li>
+          <a href="https://www.sena.edu.co/es-co/formacion/Paginas/tecnoparques.aspx" target="_blank">TECNOPARQUE
+          </a>
+          <p>Bogotá</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--derecho-->
+  <div class="vertical-menu right-menu" id="rightMenu">
+    <div class="btn-cerrar-menu-right">
+      <button class="close-btn" onclick="closeMenu('rightMenu')">
+        &times;
+      </button>
+    </div>
+    <div class="contenedor-menu-right">
+      <ul>
+        <li><a href="#secc1">Inicio</a></li>
+        <li><a href="#motmot">Mot Mot</a></li>
+        <li><a href="#yuredo">Yuredo</a></li>
+        <li><a href="#etno">Etno-ornitologia</a></li>
+        <li><a href="#museo">Museo</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li class="audio-controls">
+          <a id="openAudioModal"> Reproducir </a>
+        </li>
+      </ul>
+    </div>
+    <div class="logo-sena-menu">
+      <img src="./static/img/logos/logo-sena.webp" alt />
+    </div>
+  </div>
+
+  <!--fin menu vertical-->
+
+  <!--menu movil-->
+  <button class="my-popover-btn btn" popovertarget="my-popover">
+    <span class="icon-size">☰</span>
+  </button>
+  <div popover id="my-popover">
+    <button class="boton" popovertarget="my-popover">
+      <span>☰</span>
+    </button>
+    <div class="link-texto">
+      <ul>
+        <li><a href="#secc1">Inicio</a></li>
+        <li><a href="#motmot">Historia</a></li>
+        <li><a href="#yuredo">Cortometraje</a></li>
+        <li><a href="#inicio">Libros</a></li>
+        <li><a href="#etno">Etno-ornitologia</a></li>
+        <li><a href="#mueso">Museo</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li class="audio-controls">
+          <a id="openAudioModal" href="#"> Reproducir </a>
+        </li>
+      </ul>
+    </div>
+    <div class="link-logos">
+      <div class="link">
+        <a href="https://senavaupes.blogspot.com/" target="_blank">
+          <img class="link-hoja" src="./static/img/img_all/hoja.png" alt="" />
+        </a>
+      </div>
+      <div class="link">
+        <a href="https://mercadoslogisticaytecnologia.blogspot.com/">
+          <img class="link-engranaje" src="./static/img/img_all/Recurso 8.webp" alt="" /></a>
+      </div>
+      <div class="link">
+        <a href="https://www.sena.edu.co/es-co/Paginas/default.aspx" target="_blank">
+          <img class="link-sena" src="./static/img/img_all/log-sena1.png" alt="" /></a>
+      </div>
+      <div class="link">
+        <a href="https://comunicaciongraficasena.blogspot.com/">
+          <img class="link-pluma" src="./static/img/img_all/pluma.png" alt="" />
+        </a>
+      </div>
+      <div class="link">
+        <a href="https://actividadfisicaycultura.blogspot.com/">
+          <img class="link-corazon" src="./static/img/img_all/corazon.png" alt="" /></a>
+      </div>
+    </div>
+  </div>
+  <!-- Modal seccion 2-->
+  <div class="modal-sect2_1" id="modalSect2_1">
+    <div class="modal-content-sect2_1">
+      <button class="close-modal-sect2_1" onclick="closeModalSect2()">
+        <span> &#10006;</span>
+      </button>
+      <!--Slider-->
+      <div class="slider" id="sliderModal">
+        <img src="./static/img/img_all/MotMot_Semillero_01.png" alt="Imagen 1" class="slider-image" />
+        <img src="./static/img/img_all/MotMot_Semillero_02.png" alt="Imagen 2" class="slider-image" />
+        <img src="./static/img/img_all/MotMot_Semillero_03.png" alt="Imagen 3" class="slider-image" />
+        <img src="./static/img/img_all/MotMot_Semillero_04.png" alt="Imagen 4" class="slider-image" />
+        <img src="./static/img/img_all/MotMot_Semillero_05.png" alt="Imagen 5" class="slider-image" />
+        <img src="./static/img/img_all/semlleroPrincipal.jpeg" alt="Imagen 6" class="slider-image" />
+      </div>
+
+      <!--Flechas de navegación -->
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+  </div>
+  </div>
+
+  <!--swiper-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <!--script-->
+  <script src="./static/js/videosecc1.js"></script>
+  <script src="./static/js/menu-vertical.js"></script>
+  <script src="./static/js/moadl-audio.js"></script>
+  <script src="./static/js/player.js"></script>
+  <script src="./static/js/menu-celular.js"></script>
+  <script src="./static/js/slider_secc2.js"></script>
+  <script src="./static/js/modal_secc2.js"></script>
+  <script src="./static/js/slider4.js"></script>
+  <script src="./static/js/slider_sect6.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const popover = document.getElementById("my-popover");
+      const audioModal = document.getElementById("audioModal");
+      const closeAudioModal = document.getElementById("closeAudioModal");
+      const audioPlayer = document.getElementById("audioPlayer");
+
+      // 👉 Cerrar menú al hacer clic en cualquier link
+      document.querySelectorAll("#my-popover a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          if (link.id === "openAudioModal") {
+            e.preventDefault(); // no saltar al #
+            audioModal.style.display = "block"; // abrir reproductor
+          }
+          if (popover?.hidePopover) {
+            popover.hidePopover(); // cerrar siempre el menú
+          }
+        });
+      });
+
+      // 👉 Cerrar modal audio
+      closeAudioModal.addEventListener("click", () => {
+        audioModal.style.display = "none";
+        audioPlayer.pause();
+      });
+    });
+    function selectSong(song) {
+      const audioPlayer = document.getElementById("audioPlayer");
+      audioPlayer.src = `./static/audio-player/${song}`;
+      audioPlayer.load();
+      audioPlayer.play(); // arranca automáticamente
+    }
+
+    function playAudio() {
+      const audioPlayer = document.getElementById("audioPlayer");
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+      } else {
+        audioPlayer.pause();
+      }
+    }
+  </script>
+</body>
+
+</html>

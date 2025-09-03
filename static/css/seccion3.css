@@ -1,0 +1,115 @@
+.img_sect3 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+   top: 0%;
+}
+
+.img_sect3_start {
+    position: absolute;
+    width: 30vw;
+    height: 20vw;
+    z-index: 10;
+    top: -18%;
+    left: 65%;
+}
+.contenedor_seccion3 {
+    width: 100%;
+    height: 100dvh;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.contenedor_seccion3 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 75%;
+    width: 4vw;
+    height: 4vw;
+    z-index: 10;
+    right: 3%;
+}
+
+.contenedor_seccion3 a .btnMas {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    height: auto;
+    z-index: 10;
+    top: 0%;
+    left: 0%;
+}
+
+.contenedor_seccion3 a .btnMas:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.diana_sect3 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    z-index: 0;
+    margin-top: 3.5%;
+}
+
+.centro {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.videoYoutube {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoYoutube video {
+    width: 55vw;
+    height: 33vw;
+    border-radius: 1.5vw !important;
+    object-fit: cover;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.colibri-sect3 {
+    position: absolute;
+    width: 16vw;
+    height: auto;
+    top: 8%;
+    left: 70%;
+    z-index: 11;
+}
+
+.flor_amarilla_sect3 {
+    position: absolute;
+     width: 16vw;
+    height: 14vw;
+    top: 15%;
+    left: 16%;
+    z-index: 11;
+}
+
+img.img_sect3_bajo {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    margin-top: 77vh;
+    margin-bottom: 0;
+
+}

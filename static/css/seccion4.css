@@ -1,0 +1,251 @@
+.seccion4 {
+    background-image: url("../img/img_all/fondo4.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100dvh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.diana_sect4 {
+    position: absolute;
+    width: 100%;
+    height:auto;
+    display: flex;
+    z-index: 0;
+    margin-top: 3%;
+}
+
+.titulo-sect4 {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.titulo-sect4 h3 {
+    font-size: 5.3vw;
+    font-family: "Raleway";
+    margin-left: 10%;
+}
+
+.contenedor4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    z-index: 0;
+}
+
+.contenedor4_1 {
+    position: relative;
+    width: 10%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 10%;
+    z-index: 0;
+}
+
+.contenedor4_1 a {
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+.cartillas{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 95%;
+    margin-left: 25%;
+   
+}
+.contenedor4_1 img {
+    width: 3vw;
+    height: auto;
+}
+
+.contenedor4_1 a:hover {
+    transform: scale(1.05);
+}
+
+.contenedor4_1 h5 {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.contenedor4_3 {
+    position: relative;
+    width: 44%;
+    height: 65%;
+    display: flex;
+      flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 22%;
+    z-index: 0;
+}
+
+.contenedor4_2,
+.contenedor4_4 {
+    position: relative;
+    width: 23%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 10%;
+    z-index: 0;
+}
+.contenedor4_2 .texto {
+    position: relative;
+    top: 10%;
+   margin: 3%;
+}
+.contenedor4_2 .texto h5 {
+   padding: 10% 5% 5% 5%;
+    text-align: justify;
+    font-family: "Noto+Sans";
+    font-weight: 200;
+    font-size: 1.4vw;
+    color: var(--azulOscuro);
+}
+
+
+.sect4-tres {
+    top: 0%;
+    width: 90%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+   position: relative;
+   overflow: hidden;
+   z-index: 150;
+   position: relative;
+}
+.sect4-tres-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   width: 90%;
+   height: 90%;
+    overflow: hidden;
+    top: 5%;
+    left: 3%;
+    position: absolute;
+transition: transform 0.3s ease-in-out;
+z-index: 1500;
+
+}
+.sect4-slide{
+    min-width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sect4-slide .sect4-item1,
+.sect4-slide .sect4-item2,
+.sect4-slide .sect4-item3,
+.sect4-slide .sect4-item4
+{
+    margin-top: 5%;
+    margin-left: 7%;
+    width: 90%;
+    height: 95%;
+    z-index: 500;
+    display: block;
+    border-radius: 5%;
+    text-align: center;
+    display: flex;align-items: center;
+    justify-content: center;
+}
+.sect4-prev, .sect4-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color:var(--azulOscuro);
+    border:none;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+.sect4-prev {
+    margin-left: -91%;
+    z-index: 10000;
+}
+.sect4-next {
+    margin-right: -90%;
+    z-index: 10000;
+}
+.sect4-txt{
+    height: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12%;
+    z-index: 850;
+}
+.sect4-txt h5{
+    text-align: center;
+    font-family: "Noto+Sans";
+    font-weight: 300;
+}
+.star-sect4-centro{
+    width: 100%;
+    height: 15%;
+}
+.star-sect4-centro img{
+    position: relative;
+    margin-top: -18%;
+      width: 58vw;
+      height: 15vw;
+      margin-left: -15vw;
+      z-index: 15;
+}
+
+.cuatro{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sect4-txt{
+    position: absolute;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    padding-right: 3%;
+    z-index: 1500;
+}
+.sect4-txt h5{
+    text-align: justify;
+    font-family: "Noto+Sans";
+    font-weight: 200;
+    font-size: 1.4vw;
+    cursor: pointer;
+    z-index: 1500;
+   color: #16142f;
+}

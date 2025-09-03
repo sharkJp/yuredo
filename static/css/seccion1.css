@@ -1,0 +1,1226 @@
+#secc1 nav {
+    width: 100%;
+    height: 20dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+#secc1 .logo-yuredo {
+    position: absolute;
+    width: 16%;
+    height: auto;
+    display: block;
+    margin-top: 3%;
+    margin-left: 42%;
+}
+
+#secc1 .fondo_top,
+#secc1 .contenedor_cengtral,
+#secc1 .contenedor_footer_secc1,
+.contenedor_social {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+#secc1 .contenedor_cengtral {
+    height: 50dvh;
+}
+
+#secc1 nav h1 {
+    position: absolute;
+    font-size: 1.5vw;
+    font-family: "Raleway";
+    margin-left: 40.5%;
+    margin-top: 7.5%;
+}
+
+#secc1 #videoPlayer {
+    width: 48vw;
+    height: 30vw;
+    border-radius: 1.5vw !important;
+    overflow: hidden;
+    object-fit: cover;
+    background-color: black;
+    margin-left: 26%;
+    margin-top: 5%;
+    z-index: 1;
+}
+
+#secc1 .flor-amarilla {
+    position: absolute;
+    top: 19.5%;
+    right: 19.5%;
+    width: 12%;
+    height: auto;
+    z-index: 10;
+}
+
+#secc1 .contenedor_footer_secc1 {
+    height: 30dvh;
+}
+
+.fondo_botton {
+    position: absolute;
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 2.5%;
+    z-index: -1;
+}
+
+.play {
+    width: 11.8vw;
+    height: 11.8vw;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.play img {
+    opacity: 0.8;
+}
+
+#contenedor_social {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 49vh;
+    left: 0;
+    width: 4vw;
+    height: 15vw;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(150, 149, 149, 0.349);
+    z-index: 2000;
+}
+
+#contenedor_social:hover {
+    opacity: 1;
+    background-color: var(--azulMedio);
+}
+
+.contenedor_social {
+    width: 58%;
+    height: 20%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_social img {
+    text-align: center;
+    margin-left: 2%;
+    width: 2.5vw;
+    height: 100%;
+    cursor: pointer;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.contenedor_social img:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scaleX(1.1);
+}
+
+/* Menu vertical */
+.btn-hamburger {
+    position: fixed;
+    width: 100%;
+    height: 10vw;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 999;
+}
+
+.btn-hamburger .hamburger {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    z-index: 1;
+    background-color: var(--verdeSena);
+    top: 4.5%;
+}
+
+.btn-hamburger .hamburger span {
+    font-size: 2.5vw;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.btn-hamburger .hamburger:hover {
+    background-color: var(--azulMedio);
+}
+
+.btn-hamburger .hamburger span:hover {
+    color: var(--gris);
+}
+
+.hamburger,
+.close-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.hamburger {
+    font-size: 20%;
+    margin-right: 3%;
+}
+
+.hamburger:hover,
+.close-btn:hover {
+    color: var(--gris);
+}
+
+.vertical-menu {
+    position: fixed;
+    top: 0;
+    display: none;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.vertical-menu.active {
+    display: block;
+}
+
+.left-menu {
+    top: 55%;
+    left: 0;
+    background-color: var(--verdeSena);
+    width: 11.60vw;
+    height: 19vw;
+    border-top-right-radius: 1.5vw;
+    border-bottom-right-radius: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 9000;
+}
+
+.cerrar-logo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 15%;
+    position: relative;
+}
+
+.cerrar-logo .close-btn {
+    font-size: 2vw;
+    left: 5%;
+    position: absolute;
+}
+
+.cerrar-logo img {
+    width: 2.1vw;
+    right: 2.08vw;
+    top: 10%;
+    right: 5%;
+    position: absolute;
+}
+
+.contendor-menu-left {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contendor-menu-left ul li {
+    text-align: left;
+    padding: 5px;
+    list-style: none;
+}
+
+.contendor-menu-left ul li a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 1.1vw;
+    font-family: "Raleway";
+}
+
+li p {
+    color: black;
+    margin-top: -3%;
+    text-align: start;
+    font-size: 0.9vw;
+}
+
+.right-menu {
+    right: 0;
+    background-color: var(--azul);
+    width: 17.2vw;
+    height: 100vh;
+    border-top-left-radius: 1.5vw;
+    border-bottom-left-radius: 1.5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-cerrar-menu-right {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5%;
+    margin-right: 10%;
+    font-size: 3vw;
+    color: var(--blanco);
+}
+
+.contenedor-menu-right {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.contenedor-menu-right ul {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: right;
+    list-style: none;
+}
+
+.audio-controls a {
+    cursor: pointer;
+}
+
+.contenedor-menu-right ul li {
+    margin-top: 12%;
+    margin-right: 10%;
+}
+
+.contenedor-menu-right ul li a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 1.8vw;
+    font-weight: 500;
+    font-family: "Raleway";
+}
+
+.vertical-menu ul li a:hover {
+    color: var(--gris);
+    text-decoration: underline;
+}
+
+.logo-sena-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+}
+
+.logo-sena-menu img {
+    margin-top: 0%;
+    margin-right: -40%;
+    width: 5.9vw;
+    height: 5.8vw;
+}
+
+.hamburger-container {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+
+/* Modal container */
+.audio-modal {
+    position: absolute;
+    display: none;
+    position: fixed;
+    z-index: 1500;
+    left: 1%;
+    top: 5%;
+    width: 24%;
+    height: 25%;
+    overflow: auto;
+    z-index: 5000;
+    background-color: rgba(255, 255, 255, 0.406);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    flex-direction: column;
+    border: none;
+    overflow: hidden;
+}
+
+.audio-modal-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/*bocina, volumen y btn cerrar*/
+.cerrar-audio {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.icon {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.volume-range {
+    display: none;
+}
+
+.bar-hoverbox {
+    padding: 1vw 2vw;
+    opacity: 0.7;
+    transition: opacity .2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bar {
+    background: transparent;
+    border: solid 1px black;
+    height: 2.7vw;
+    width: 1vw;
+    border-radius: 15px;
+    overflow: hidden;
+    position: absolute;
+    cursor: pointer;
+    top: 1%;
+    margin-left: -10%;
+}
+
+.bar-fill {
+    background: var(--verdeSena);
+    width: 100%;
+    height: 5%;
+    transition: height 0.2s;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    transition: height 0.1s ease;
+}
+
+.fa-volume-up {
+    color: var(--verdeSena);
+    margin-left: 10%;
+}
+
+.cerrar-audio #closeAudioModal {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cerrar-audio #closeAudioModal h2 {
+    color: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 900;
+    margin-right: 10%;
+    background: var(--verdeSena);
+    border-radius: 50%;
+    width: 2vw;
+    height: 2vw;
+}
+
+.audio-close:hover,
+.audio-close:focus {
+    color: var(--gris);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*texto*/
+.player-audio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+}
+
+.player-audio .volume {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.player-audio .volume .texto {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.player-audio .volume .texto h2 a {
+    font-size: 1vw;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.player-audio .volume .texto h2 a:hover {
+    color: var(--verdeSena);
+}
+
+.botones {
+    width: 100%;
+    height: 45%;
+}
+
+.contenedor-tempo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-tempo .player {
+    width: 4.5vw;
+    z-index: 10;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 2.8vw;
+    border: solid 2px rgb(2, 2, 40);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: -2%;
+    position: relative;
+}
+
+progress {
+    width: 95%;
+    height: 33%;
+    background: transparent;
+}
+
+.barra progress::-webkit-progress-bar {
+    border-radius: 10px;
+
+    background-color: var(--verdeSena);
+}
+
+.barra progress::-webkit-progress-value {
+    background-color: transparent;
+}
+
+.marker {
+    margin-top: 2.5%;
+    position: absolute;
+    height: 60%;
+    width: 1%;
+    border-radius: 5px;
+    background-color: black;
+    top: 0;
+    left: 5%;
+    transition: left 0.1s;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0vw;
+    left: 0;
+    width: 7%;
+    height: 2.8vw;
+    border: solid 2px black;
+    cursor: pointer;
+    position: relative;
+}
+
+.option .btn {
+    width: 18%;
+    height: 18%;
+    border-radius: 50%;
+    background: black;
+    margin-top: 8%;
+}
+
+.player-audio .submenu {
+    width: 30%;
+    display: none;
+    flex-direction: column;
+    background-color: none;
+    border: none;
+}
+
+.submenu a {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1vw;
+    padding: 2%;
+}
+
+.submenu a:hover {
+    color: var(--naranja);
+    text-decoration: underline;
+}
+
+#Capa_1 {
+    width: 9.5vw;
+    height: 6.6vw;
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 7% !important;
+    z-index: 50;
+    z-index: 0;
+}
+
+/*animacion nebulosa*/
+.purple,
+.yellow,
+.red,
+.blue {
+    fill: #a6b5bb;
+    animation: colorGroup 5s infinite;
+}
+
+/* Animación con transición suave en la escala de azules */
+@keyframes colorGroup {
+    0% {
+        fill: #244154;
+    }
+
+    20% {
+        fill: #5ab8f7;
+    }
+
+    40% {
+        fill: #8bbfe9;
+    }
+
+    60% {
+        fill: #559fde;
+    }
+
+    80% {
+        fill: #2c7ecf;
+    }
+
+    100% {
+        fill: #1664a2;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        fill: #80c2e9;
+    }
+
+    25% {
+        fill: #a7d3f5;
+    }
+
+    50% {
+        fill: #6db8ec;
+    }
+
+    75% {
+        fill: #3b97e0;
+    }
+
+    100% {
+        fill: #1c6fb7;
+    }
+}
+
+.start-derecho {
+    position: absolute;
+    width: 25vw;
+    height: 38vw;
+    z-index: 0;
+    margin-top: -35%;
+    right: 0;
+    
+}
+
+.logo-sena {
+    position: absolute;
+    width: 6vw;
+    height: auto;
+    right: 2%;
+    margin-top: 6% !important;
+    z-index: 0;
+    
+}
+
+.menu-celular {
+    display: none;
+}
+
+/* Responsive celulares*/
+@media (max-width: 767px) {
+  
+    #secc1 .logo-yuredo {
+        width: 28% !important;
+        margin-top: 13% !important;
+        margin-left: 41%;
+    }
+
+    #secc1 nav h1 {
+        font-size: 0.8rem !important;
+        margin-top: 20% !important;
+        margin-left: 33%;
+    }
+
+    .btn-hamburger,
+    .hamburger,
+    .vertical-menu {
+        display: none;
+    }
+
+    .my-popover-btn {
+        position: fixed;
+        top: 3%;
+        right: 3%;
+        width: 8vw;
+        height: 8vw;
+        border: none;
+        background-color: var(--azulMedio);
+        border-radius: 5px;
+        z-index: 1500;
+    }
+
+    #my-popover:popover-open {
+        flex-direction: column;
+        border: none;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-color: var(--verdeBiche);
+        z-index: 5000;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .my-popover-btn span {
+        color: var(--gris);
+        font-size: 6vw;
+        font-weight: 900;
+    }
+
+    #my-popover .boton {
+        width: 10vw;
+        height: 10vw;
+        border-radius: 50%;
+        position: relative;
+        margin: 5% 0 0 85%;
+        background: none;
+        border: none;
+        background-color: var(--naranja);
+    }
+
+    #my-popover .boton span {
+        font-size: 7vw;
+        font-weight: 900;
+        color: white;
+    }
+
+    .link-texto {
+        width: 80%;
+        height: 60vh;
+        margin: 5% auto;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .link-texto ul {
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .link-texto ul li {
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .link-texto ul li a {
+        text-decoration: none;
+        color: white;
+        margin: 2.5vw;
+        font-size: 7vw;
+        font-weight: 500;
+        font-family: "Raleway";
+        font-style: italic;
+        text-align: center;
+        display: flex;
+    }
+
+    .link-logos {
+        display: flex;
+        width: 100%;
+        height: 30vh;
+        text-align: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .link-logos img {
+        width: 14vw;
+        height: auto;
+    }
+
+    #Capa_1 {
+        width: 9.5vw;
+        height: 6.6vw;
+        position: absolute;
+        margin-left: 2%;
+        top: 94% !important;
+        z-index: 50;
+        z-index: 0;
+    }
+
+    #contenedor_social {
+        top: 30%;
+        width: 10vw;
+        height: 55vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #23647675;
+    }
+
+    .contenedor_social {
+        width: 70%;
+        display: flex;
+        margin-left: -3%;
+        margin-top: 5%;
+        z-index: 1;
+        flex-direction: row;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .contenedor_social img {
+        display: block;
+        margin-left: 2%;
+        width: 7vw;
+        height: 100%;
+        cursor: pointer;
+        z-index: 0;
+        opacity: 0.8;
+    }
+
+    #secc1 #videoPlayer {
+        position: absolute;
+        display: block;
+        top: 25%;
+        right: 10%;
+        width: 75vw;
+        height: 70vw;
+    }
+
+    .play {
+        width: 18vw;
+        height: auto;
+        top: 45%;
+        left: 52.5%;
+    }
+
+    .flor-amarilla {
+        margin-top: 7%;
+        margin-right: -20%;
+        width: 5rem !important;
+        height: auto;
+    }
+
+    .fondo_botton {
+        position: absolute;
+        width: 100%;
+        height: 13% !important;
+        left: -1%;
+        top: 93% !important;
+    }
+
+    .start-secc1 {
+        position: absolute;
+        margin-top: 35% !important;
+        z-index: 1;
+    }
+
+
+
+    #audioModal {
+        top: 70%;
+        margin-left: 10%;
+        width: 80%;
+        height: 15%;
+        z-index: 100;
+        background-color: rgba(24, 126, 36, 0.136);
+        backdrop-filter: blur(18px);
+    }
+
+    .cerrar-audio #closeAudioModal h2 {
+        position: absolute;
+        font-size: 7vw;
+        font-weight: bold;
+        width: 8vw;
+        height: 8vw;
+        top: 4%;
+        right: -8%;
+        cursor: pointer;
+    }
+
+    .texto {
+        margin-left: 15%;
+        margin-top: -10%;
+    }
+
+    .player-audio .volume .texto h2 a {
+        font-size: 0.8rem;
+    }
+
+    .contenedor-tempo {
+        width: 100%;
+        height: 90%;
+        margin-top: -5%;
+    }
+
+    .botones {
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -5%;
+    }
+
+    #Capa_2 {
+        position: relative;
+        width: 12vw;
+        height: auto;
+        right: 2%;
+        top: -5%;
+        z-index: 5;
+    }
+
+    .barra {
+        height: 8vw;
+        left: -2%;
+        top: -5%;
+    }
+
+    .option {
+        display: flex;
+        top: -5%;
+        height: 8vw;
+    }
+
+    #submenu {
+        height: 16vw !important;
+        width: 18vw !important;
+        margin-right: 10vw !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #submenu a {
+        font-size: 3vw !important;
+    }
+
+    .logo-sena {
+        position: absolute;
+        top: 94% !important;
+        right: 5%;
+        width: 8vw;
+        height: auto !important;
+        z-index: 1;
+    }
+    .seccion1{
+        background-color: #24415472;
+        height: 100dvh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Estilos para tabletas en orientación vertical y horizontal */
+    #secc1 .logo-yuredo {
+        width: 25% !important;
+        margin-top: 13% !important;
+        margin-left: 37.5% !important;
+    }
+
+    #secc1 nav h1 {
+        font-size: 1.5rem !important;
+        margin-top: 20% !important;
+        margin-left: 33% !important;
+    }
+
+    .hamburger {
+        width: 5vw !important;
+        height: 5vw !important;
+    }
+
+    .hamburger span {
+        font-size: 4vw !important;
+    }
+
+    #secc1 #videoPlayer {
+        width: 70vw;
+        height: 45vw;
+        margin-left: 16%;
+        margin-top: 10%;
+        z-index: 1;
+    }
+
+    .play {
+        width: 15vw;
+        height: 15vw;
+        top: 45%;
+        left: 50%;
+        cursor: pointer;
+    }
+
+    .flor-amarilla {
+        width: 15vw !important;
+        top: 23%;
+        margin: 4% -13% 0 0%;
+    }
+
+    #contenedor_social {
+        width: 8%;
+        height: 25vw;
+        background-color: var(--azulMedio);
+        opacity: 0.8;
+    }
+
+    .contenedor_social img {
+        width: 4vw;
+    }
+
+    .left-menu {
+        height: 35vw;
+        width: auto;
+        overflow: hidden;
+    }
+
+    .contendor-menu-left ul li a {
+        font-size: 0.9em;
+        font-weight: 700;
+    }
+
+    .contendor-menu-left ul li p {
+        margin-top: 2%
+    }
+
+    .close-btn {
+        font-size: 2.5vw !important;
+        font-weight: bold !important;
+    }
+
+    .cerrar-logo img {
+        width: 3.5vw;
+        right: auto;
+        right: 5%;
+    }
+
+    .logo-sena-menu img {
+        width: 8vw !important;
+        height: auto;
+        margin-right: 2%;
+    }
+
+    .close-btn {
+        font-size: 3.5vw !important;
+        cursor: pointer;
+    }
+
+    .audio-modal {
+        width: 60%;
+        height: 10%;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        background-color: rgba(24, 126, 36, 0.136);
+        backdrop-filter: blur(18px);
+    }
+
+    .audio-modal-content {
+        width: 85%;
+        height: 80%;
+        top: 10%;
+        left: 8%;
+    }
+
+    .option .btn {
+        display: block;
+    }
+
+    .cerrar-audio #closeAudioModal h2 {
+        position: absolute;
+        font-size: 4vw;
+        font-weight: bold;
+        width: 3.5vw;
+        height: 3.5vw;
+        right: -13%;
+        cursor: pointer;
+    }
+
+    .icon {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 35%;
+    }
+
+    .icon-size {
+        margin-left: -98% !important;
+    }
+
+    .bar-hoverbox {
+        margin-left: -140%;
+    }
+
+    .texto {
+        margin-left: 5%;
+        margin-top: -10%;
+    }
+
+    .texto h2 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .player-audio .volume .texto h2 a {
+        font-size: 1.8vw;
+    }
+
+    .contenedor-tempo {
+        width: 90%;
+    }
+
+    .contenedor-tempo .player {
+        width: 6vw;
+    }
+
+    .botones {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 75%;
+        margin-top: -5%;
+    }
+
+    .barra {
+        height: 3.5vw;
+    }
+
+    .submenu a {
+        font-size: 1.5vw;
+    }
+
+    .my-popover-btn {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .my-popover-btn span {
+        font-size: 5vw;
+    }
+
+    #Capa_1 {
+        margin: 30% 0 0 3% !important;
+        z-index: 1;
+    }
+
+    .start-secc1 {
+        margin-top: 25%;
+        width: 100%;
+        height: 40%;
+        z-index: 1;
+    }
+
+    .start-derecho {
+        width: 40%;
+        height: 60%;
+        margin-top: -65%;
+        z-index: 1;
+    }
+
+    .logo-sena {
+        margin-top: 25% !important;
+        width: 8vw;
+        height: auto;
+        z-index: 1;
+    }
+
+    .icon-size,
+    .btn {
+        display: none;
+    }
+
+    .fondo_botton {
+        position: absolute;
+        width: 100%;
+        height: 15% !important;
+      top: 84% !important;
+
+    }
+}
