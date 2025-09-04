@@ -22,6 +22,7 @@ body {
    padding: 0;
    width: 100%;
    height: 100dvh;
+   overflow-x: hidden;
 }
 
 .seccion {
@@ -32,21 +33,17 @@ body {
 
 .seccion1 {
    flex-direction: column;
-   position: relative;
+   position: relative;  
 }
 
 .seccion2 {
    flex-direction: column;
+    
 }
 
 .seccion3 {
   position: relative;
-}
-
-
-
-.seccion5 {
-
+  
 }
 
 .icon-size,
