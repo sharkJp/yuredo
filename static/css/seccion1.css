@@ -33,6 +33,7 @@
     font-family: "Raleway";
     margin-left: 40.5%;
     margin-top: 7.5%;
+    color: var(--azulOscuro);
 }
 
 #secc1 #videoPlayer {

@@ -54,15 +54,17 @@
     font-weight: 500;
     top: 35%;
     left: 8%;
+    color: var(--azulOscuro);
 }
 
-.texto_titulo h2 {
+.texto_titulo h3 {
     position: relative;
-    font-size: 5.5rem;
+    font-size: 5.3vw;
     font-family: "Raleway";
     font-weight: bold;
     top: 20%;
     left: 18%;
+    color: var(--azulOscuro);
 }
 
 .contenedor_central_secc2 {

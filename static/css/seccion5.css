@@ -27,29 +27,30 @@
     flex-direction: column;
     position: absolute;
     align-items: center;
+ 
 
 }
 
-.texto-sect5 h2 {
-    font-weight: 900;
-    font-size: 5.3vw;
+.texto-sect5 h4 {
+    font-weight: 500;
+    font-size: 3.5rem;
     font-family: 'Raleway';
     position: relative;
     display: flex;
     align-items: center;
-    top: 85%;
-    left: 11%;
+    top: 90%;
+    left: 9%;
     color: var(--azulOscuro)
 }
 
 .texto-sect5 h3 {
-    font-weight: 900;
-    font-size: 3.7rem;
+    font-weight: bold;
+    font-size: 5.5vw;
     font-family: 'Raleway';
     position: relative;
     display: flex;
-    top: 65%;
-    left: 20%;
+    top: 70%;
+    left: 23%;
     color: var(--azulOscuro)
 }
 
@@ -75,7 +76,14 @@
     margin-top: 10%;
     z-index: 1;
 }
-
+.txt-sect5 h4 {
+    font-family: "Noto+Sans";
+    font-weight: 900;
+    font-size: 1.6vw;
+    text-align: justify;
+    padding: 2%;
+    color: var(--azulOscuro);
+}
 .txt-sect5 h5 {
     font-family: "Noto+Sans";
     font-weight: 500;
@@ -84,7 +92,15 @@
     padding: 2%;
     color: #16142f;
 }
-
+.txt-sect5 a{
+    color: var(--naranja);
+    text-decoration: none;
+    
+}
+.txt-sect5 a:hover{
+    color: var(--azulMedio);
+    text-decoration:underline;
+}
 .contenedor-sect5-slider {
     width: 45%;
     height: 100%;
